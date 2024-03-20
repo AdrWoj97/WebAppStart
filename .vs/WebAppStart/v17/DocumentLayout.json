@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\adria\\source\\repos\\WebAppStart\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B0434B1A-A3A3-43C8-A9B8-76BD4B92CAED}|WebApp\\WebApp.csproj|c:\\users\\adria\\source\\repos\\webappstart\\webapp\\webapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B0434B1A-A3A3-43C8-A9B8-76BD4B92CAED}|WebApp\\WebApp.csproj|solutionrelative:webapp\\webapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B0434B1A-A3A3-43C8-A9B8-76BD4B92CAED}|WebApp\\WebApp.csproj|c:\\users\\adria\\source\\repos\\webappstart\\webapp\\webapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{B0434B1A-A3A3-43C8-A9B8-76BD4B92CAED}|WebApp\\WebApp.csproj|solutionrelative:webapp\\webapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
@@ -24,13 +28,26 @@
               "RelativeDocumentMoniker": "WebApp\\WebApp.csproj",
               "ToolTip": "C:\\Users\\adria\\source\\repos\\WebAppStart\\WebApp\\WebApp.csproj",
               "RelativeToolTip": "WebApp\\WebApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-20T11:06:27.834Z",
+              "WhenOpened": "2024-03-20T11:27:04.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebApp",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\WebAppStart\\WebApp\\WebApp.csproj",
+              "RelativeDocumentMoniker": "WebApp\\WebApp.csproj",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\WebAppStart\\WebApp\\WebApp.csproj",
+              "RelativeToolTip": "WebApp\\WebApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-20T11:06:27.834Z",
+              "EditorCaption": ""
             }
           ]
         }
