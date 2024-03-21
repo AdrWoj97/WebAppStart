@@ -25,3 +25,8 @@ Tools -> NuGet Package Manager -> Console
 update-database
 
 "
+Tworzenie tabeli:
+-Utworzenie modelu
+-ApplicationDbContext -> DbSet dla modelu
+-Package Manager console -> add migration i nazwać -> update-database
+-Mamy nową tabelę 
