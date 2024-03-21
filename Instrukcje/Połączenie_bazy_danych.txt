@@ -1,0 +1,27 @@
+Praca na entity freamwork core -> połączenie z bazą danych
+
+appseting.json
+  "ConnectionStrings": {
+    "DefaulConnection": "Server=--------;Database=-----------;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+Do połązenia z serwerem
+
+Instalacja nuget packet entity freamwork core (core, sqlserver, tools)
+
+Data -> ApplicationDbContext
+    public class ApplicationDbContext :DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
+        { 
+        
+        }
+    }
+Program.cs -> builder.Services.AddDbContext<ApplicationDbContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaulConnection")));
+
+Tools -> NuGet Package Manager -> Console
+
+"
+update-database
+
+"
