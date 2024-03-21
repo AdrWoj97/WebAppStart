@@ -1,8 +1,11 @@
-﻿namespace WebApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApp.Models
 {
     public class Kategorie
     {
-        public int Id { get; set; }
+        public int KategorieId { get; set; }
+        [Required]
         public string Name { get; set; }
         public int DisplayOrder { get; set; }
     }
