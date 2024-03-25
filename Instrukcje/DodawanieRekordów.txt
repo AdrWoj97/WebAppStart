@@ -1,0 +1,4 @@
+ApplicatioDbContext -> OnModelCreating -> tworzenie obiektów
+PM -> add-migration (nazwa) -> update-database
+
+Zawsze przy zmianach przy bazie danych w pm robimy migrację 
