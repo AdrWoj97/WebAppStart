@@ -1,0 +1,5 @@
+W layout przed render body <partial name = "*nazwapliku*"/>
+Tworzenie pliku wewnątrz shared
+W pliku html -> toastr + script.js
+Layout -> script.css
+Contoller -> TempData
