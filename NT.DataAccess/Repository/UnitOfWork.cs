@@ -12,10 +12,12 @@ namespace NT.DataAccess.Repository
     {
         private ApplicationDbContext _db;
         public IKategoriaRepository Kategoria { get; private set; }
+        public IProductsRepository Products { get; private set; }
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
             Kategoria = new KategorieRepository(_db);
+            Products = new ProductRepository(_db);
         }
 
 

@@ -4,8 +4,9 @@ using NT.DataAccess.Repository.IRepository;
 using NT.Models;
 using WebApp.Data;
 
-namespace WebApp.Controllers
+namespace WebApp.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class KategorieController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -45,7 +46,7 @@ namespace WebApp.Controllers
         {
             if (id == null || id == 0)
                 return NotFound();
-            Kategorie? kategoriaFrmDb = _unitOfWork.Kategoria.Get(u=>u.KategorieId==id);
+            Kategorie? kategoriaFrmDb = _unitOfWork.Kategoria.Get(u => u.KategorieId == id);
             if (kategoriaFrmDb == null)
                 return NotFound();
 
@@ -69,12 +70,12 @@ namespace WebApp.Controllers
             if (id == null || id == 0)
             {
                 return NotFound();
-            }    
+            }
             Kategorie? kategoriaFrmDb = _unitOfWork.Kategoria.Get(u => u.KategorieId == id);
             if (kategoriaFrmDb == null)
             {
                 return NotFound();
-            }    
+            }
             return View(kategoriaFrmDb);
         }
         [HttpPost, ActionName("Delete")]

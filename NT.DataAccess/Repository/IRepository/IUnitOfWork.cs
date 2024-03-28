@@ -9,6 +9,7 @@ namespace NT.DataAccess.Repository.IRepository
     public interface IUnitOfWork
     {
         IKategoriaRepository Kategoria{ get; }
+        IProductsRepository Products { get; }
         void Save();
     }
 }
