@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using NT.DataAccess.Repository;
+using NT.DataAccess.Repository.IRepository;
 using WebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaulConnection")));
-
+builder.Services.AddScoped<IKategoriaRepository, KategorieRepository>();
 
 var app = builder.Build();
 
