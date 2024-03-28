@@ -1,0 +1,12 @@
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\NT.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\NT.Models.AssemblyInfoInputs.cache
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\NT.Models.AssemblyInfo.cs
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\NT.Models.csproj.CoreCompileInputs.cache
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\NT.Models.sourcelink.json
+C:\Users\adria\source\repos\WebAppStart\NT.Models\bin\Debug\net8.0\NT.Models.deps.json
+C:\Users\adria\source\repos\WebAppStart\NT.Models\bin\Debug\net8.0\NT.Models.dll
+C:\Users\adria\source\repos\WebAppStart\NT.Models\bin\Debug\net8.0\NT.Models.pdb
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\NT.Models.dll
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\refint\NT.Models.dll
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\NT.Models.pdb
+C:\Users\adria\source\repos\WebAppStart\NT.Models\obj\Debug\net8.0\ref\NT.Models.dll

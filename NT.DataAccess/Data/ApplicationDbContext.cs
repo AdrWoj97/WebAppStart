@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApp.Models;
+using NT.Models;
 
 namespace WebApp.Data
 {
