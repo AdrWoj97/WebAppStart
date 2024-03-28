@@ -1,26 +1,27 @@
 ﻿using NT.DataAccess.Repository.IRepository;
-using NT.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using WebApp.Data;
 
 namespace NT.DataAccess.Repository
 {
-    public class KategorieRepository : Repository<Kategorie>, IKategoriaRepository
+    public class UnitOfWork : IUnitOfWork
     {
         private ApplicationDbContext _db;
-        public KategorieRepository(ApplicationDbContext db) : base(db)
+        public IKategoriaRepository Kategoria { get; private set; }
+        public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
+            Kategoria = new KategorieRepository(_db);
         }
 
-        public void Update(Kategorie obj)
+
+        public void Save()
         {
-            _db.Kategorie.Update(obj);
+            _db.SaveChanges();
         }
-    }
+    };
 }

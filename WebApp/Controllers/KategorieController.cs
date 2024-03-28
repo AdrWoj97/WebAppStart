@@ -8,14 +8,14 @@ namespace WebApp.Controllers
 {
     public class KategorieController : Controller
     {
-        private readonly IKategoriaRepository _kategoriaRepository;
-        public KategorieController(IKategoriaRepository db)
+        private readonly IUnitOfWork _unitOfWork;
+        public KategorieController(IUnitOfWork unitOfWork)
         {
-            _kategoriaRepository = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            List<Kategorie> objCategoryList = _kategoriaRepository.GetAll().ToList();
+            List<Kategorie> objCategoryList = _unitOfWork.Kategoria.GetAll().ToList();
             return View(objCategoryList);
         }
 
@@ -33,8 +33,8 @@ namespace WebApp.Controllers
             }
             else if (ModelState.IsValid)
             {
-                _kategoriaRepository.Add(obj);
-                _kategoriaRepository.Save();
+                _unitOfWork.Kategoria.Add(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Utworzono kategorię";
                 return RedirectToAction("Index");
             }
@@ -45,7 +45,7 @@ namespace WebApp.Controllers
         {
             if (id == null || id == 0)
                 return NotFound();
-            Kategorie? kategoriaFrmDb = _kategoriaRepository.Get(u=>u.KategorieId==id);
+            Kategorie? kategoriaFrmDb = _unitOfWork.Kategoria.Get(u=>u.KategorieId==id);
             if (kategoriaFrmDb == null)
                 return NotFound();
 
@@ -56,8 +56,8 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _kategoriaRepository.Update(obj);
-                _kategoriaRepository.Save();
+                _unitOfWork.Kategoria.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Zapisano zmiany w kategorii";
                 return RedirectToAction("Index");
             }
@@ -70,7 +70,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }    
-            Kategorie? kategoriaFrmDb = _kategoriaRepository.Get(u => u.KategorieId == id);
+            Kategorie? kategoriaFrmDb = _unitOfWork.Kategoria.Get(u => u.KategorieId == id);
             if (kategoriaFrmDb == null)
             {
                 return NotFound();
@@ -84,13 +84,13 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            Kategorie? kategoriaFrmDb = _kategoriaRepository.Get(u => u.KategorieId == id);
+            Kategorie? kategoriaFrmDb = _unitOfWork.Kategoria.Get(u => u.KategorieId == id);
             if (kategoriaFrmDb == null)
             {
                 return NotFound();
             }
-            _kategoriaRepository.Remove(kategoriaFrmDb);
-            _kategoriaRepository.Save();
+            _unitOfWork.Kategoria.Remove(kategoriaFrmDb);
+            _unitOfWork.Save();
             TempData["success"] = "Usunięto kategorię";
             return RedirectToAction("Index");
         }
