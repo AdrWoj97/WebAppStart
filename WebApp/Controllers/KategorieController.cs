@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using NT.Models;
 using WebApp.Data;
-using WebApp.Models;
 
 namespace WebApp.Controllers
 {
