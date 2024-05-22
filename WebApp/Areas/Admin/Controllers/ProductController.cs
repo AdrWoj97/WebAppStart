@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.IdentityModel.Tokens;
 using NT.DataAccess.Repository.IRepository;
@@ -24,7 +25,7 @@ namespace WebApp.Areas.Admin.Controllers
             return View(objCategoryList);
         }
 
-        public IActionResult Create()
+        public IActionResult Upsert(int? id)
         {
             ProductVM productVM = new ProductVM()
             {
@@ -35,10 +36,20 @@ namespace WebApp.Areas.Admin.Controllers
                 }),
                 Product = new Product()
             };
-            return View(productVM);
+            if (id == null || id == 0)
+            {
+                //create
+                return View(productVM);
+            }
+            else 
+            { 
+                //update
+                productVM.Product = _unitOfWork.Products.Get(u=>u.ProductId == id);
+                return View(productVM);
+            }
         }
         [HttpPost]
-        public IActionResult Create(ProductVM obj)
+        public IActionResult Upsert(ProductVM obj, IFormFile? file)
         {
             if (ModelState.IsValid)
             {
@@ -56,29 +67,6 @@ namespace WebApp.Areas.Admin.Controllers
                 });
                 return View(obj);
             }
-        }
-        [HttpGet]
-        public IActionResult Edit(int? id)
-        {
-            if (id == null || id == 0)
-                return NotFound();
-            Product? productFrmDb = _unitOfWork.Products.Get(u => u.ProductId == id);
-            if (productFrmDb == null)
-                return NotFound();
-
-            return View(productFrmDb);
-        }
-        [HttpPost]
-        public IActionResult Edit(Product obj)
-        {
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.Products.Update(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "Zapisano zmiany w produktach";
-                return RedirectToAction("Index");
-            }
-            return View();
         }
         [HttpGet]
         public IActionResult Delete(int? id)
