@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.IdentityModel.Tokens;
 using NT.DataAccess.Repository.IRepository;
 using NT.Models;
+using NT.Models.ViewModels;
+using System.Collections.Generic;
 using WebApp.Data;
 
 namespace WebApp.Areas.Admin.Controllers
@@ -17,24 +20,42 @@ namespace WebApp.Areas.Admin.Controllers
         public IActionResult Index()
         {
             List<Product> objCategoryList = _unitOfWork.Products.GetAll().ToList();
+
             return View(objCategoryList);
         }
 
         public IActionResult Create()
         {
-            return View();
+            ProductVM productVM = new ProductVM()
+            {
+                CategoryList = _unitOfWork.Kategoria.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.KategorieId.ToString()
+                }),
+                Product = new Product()
+            };
+            return View(productVM);
         }
         [HttpPost]
-        public IActionResult Create(Product obj)
+        public IActionResult Create(ProductVM obj)
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.Products.Add(obj);
+                _unitOfWork.Products.Add(obj.Product);
                 _unitOfWork.Save();
                 TempData["success"] = "Utworzono produkt";
                 return RedirectToAction("Index");
             }
-            return View();
+            else 
+            {
+                obj.CategoryList = _unitOfWork.Kategoria.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.KategorieId.ToString()
+                });
+                return View(obj);
+            }
         }
         [HttpGet]
         public IActionResult Edit(int? id)
