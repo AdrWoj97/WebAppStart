@@ -1511,7 +1511,10 @@
         },
         "runtime": {
           "bin/placeholder/NT.Models.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
