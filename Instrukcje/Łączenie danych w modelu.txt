@@ -1,0 +1,5 @@
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public Kategorie Category { get; set; }
+
+Dodanie powoduję połącznie po id dwóch tabel

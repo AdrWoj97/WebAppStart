@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NT.Models
 {
@@ -39,5 +40,9 @@ namespace NT.Models
         [DisplayName("Cena za 100+")]
         [Range(1, 1000)]
         public double Price100 { get; set; }
+
+        public int KategorieId { get; set; }
+        [ForeignKey("KategorieId")]
+        public Kategorie Kategorie{ get; set; }
     }
 }
