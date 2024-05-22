@@ -1,0 +1,59 @@
+﻿@model Product
+<div class="card shadow border-0 my-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="col-12 text-center">
+            <h2 class="text-white">Usuwanie produktów</h2>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post">
+            <input asp-for="ProductId" hidden />
+            <div class="border p-3">
+                <div asp-validation-summary="All"></div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="Title" class="p-0"></label>
+                    <input asp-for="Title" class="form-control" disabled />
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="Description" class="p-1"></label>
+                    <input asp-for="Description" class="form-control" disabled />
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="Author" class="p-1"></label>
+                    <input asp-for="Author" class="form-control" disabled />
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="ListPrice" class="p-1"></label>
+                    <input asp-for="ListPrice" class="form-control" disabled />
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="Price" class="p-1"></label>
+                    <input asp-for="Price" class="form-control" disabled />
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="Price50" class="p-1"></label>
+                    <input asp-for="Price50" class="form-control" disabled />
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="Price100" class="p-1"></label>
+                    <input asp-for="Price100" class="form-control" disabled />
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <label asp-for="ISBN" class="p-1"></label>
+                    <input asp-for="ISBN" class="form-control" disabled />
+                </div>
+
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-danger form-control">Usuń produkt</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Product" asp-action="Index" class="btn btn-secondary form-control">
+                            Powrót
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

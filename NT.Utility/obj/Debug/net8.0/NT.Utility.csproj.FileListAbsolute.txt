@@ -1,0 +1,12 @@
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\bin\Debug\net8.0\NT.Utility.deps.json
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\bin\Debug\net8.0\NT.Utility.dll
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\bin\Debug\net8.0\NT.Utility.pdb
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\NT.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\NT.Utility.AssemblyInfoInputs.cache
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\NT.Utility.AssemblyInfo.cs
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\NT.Utility.csproj.CoreCompileInputs.cache
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\NT.Utility.sourcelink.json
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\NT.Utility.dll
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\refint\NT.Utility.dll
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\NT.Utility.pdb
+C:\Users\adria\source\repos\WebAppStart\NT.Utility\obj\Debug\net8.0\ref\NT.Utility.dll
